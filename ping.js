@@ -21,7 +21,7 @@ function sendText(body){
     )
 }
 
-//ping my projects
+//ping my projects, send text if error
 async.each(sites, (site, callback) => {
     request.get(site, (err, res, body) => {
         if(err){
@@ -34,8 +34,7 @@ async.each(sites, (site, callback) => {
     });
 }, function(err){
         if(err){
-            return console.log("Error: ",err);
-        }
             sendText(JSON.stringify(statuses));
+        }
     }
 )
