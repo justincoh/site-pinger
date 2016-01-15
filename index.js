@@ -1,8 +1,7 @@
 "use strict";
 
 let CronJob = require('cron').CronJob,
-    pingSites = require('./ping'),
-    fs = require('fs');
+    pingSites = require('./ping');
 
 /*
     Pings at 9AM and 6PM each day
