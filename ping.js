@@ -56,6 +56,4 @@ function pingSites(){
     )
 }
 
-pingSites()
-
 module.exports = pingSites;
