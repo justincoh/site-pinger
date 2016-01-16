@@ -17,6 +17,7 @@ function sendText(body){
         from: settings.TWILIO_NUMBER,
         body: body
     }, (err, res) =>{
+        // justin make this write to real log
             if(err) {return console.log("Twilio Error: ",err); }
         }
     )
